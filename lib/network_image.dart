@@ -8,7 +8,7 @@ class NetworkImageDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Network Image"),),
       body: Column(children: [
-        Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AKF7LelsXtbK8YAYYdiPrDMZdFd74ZTgkQ&s", width: 400,height: 300,)
+        Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s")
       ],),
     );
   }
