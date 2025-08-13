@@ -5,6 +5,7 @@ import 'package:flutter_sec_5/listtiledemo.dart';
 import 'package:flutter_sec_5/login_page.dart';
 import 'package:flutter_sec_5/network_image.dart';
 import 'package:flutter_sec_5/row_column.dart';
+import 'package:flutter_sec_5/single_selection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ListTileDemo(),
+      home: SingleSelectionDemo(),
     );
   }
 }
