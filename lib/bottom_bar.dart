@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sec_5/listtiledemo.dart';
 import 'package:flutter_sec_5/login_page.dart';
@@ -17,22 +18,18 @@ class _BottomBarDemoState extends State<BottomBarDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screenList.elementAt(selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
-          unselectedItemColor: Colors.white60,
-          selectedItemColor: Colors.white,
-          showUnselectedLabels: false,
-          onTap: (val){
-            setState(() {
-              selectedIndex =val;
-            });
-          },
-          currentIndex: selectedIndex,
-          items:[
-        BottomNavigationBarItem(icon: Icon(Icons.home),label:'Home' ),
-        BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings'),
-      ]),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.blueAccent.shade100,
+        color: Colors.blue,
+        buttonBackgroundColor: Colors.lightBlue,
+        animationDuration: Duration(milliseconds: 300),
+        items: const [
+          Icon(Icons.home, size: 30, color: Colors.white),
+          Icon(Icons.favorite, size: 30, color: Colors.white),
+          Icon(Icons.person, size: 30, color: Colors.white),
+        ],
+        onTap: (index) => setState(() => selectedIndex = index),
+      ),
 
 
     );
