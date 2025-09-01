@@ -18,7 +18,7 @@ class GridViewDemo extends StatelessWidget {
             crossAxisSpacing: 20,
             mainAxisExtent: 60,
           ),
-          itemCount: 17,
+          itemCount: 13,
           itemBuilder: (context, child){
             return Container(
               color: Colors.blue,

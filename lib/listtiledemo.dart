@@ -13,13 +13,14 @@ class ListTileDemo extends StatelessWidget {
       body: ListView.builder(
         itemCount: 5,
         itemBuilder: (context, i){
-          return Card(
-            color: Colors.greenAccent,
+          return
+          Card(
+            color: Colors.white60,
             child: ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(Icons.ac_unit),
               title: Text("List Tile"),
-              subtitle: Text("Flutter Class"),
-              trailing: Icon(Icons.arrow_forward_ios_sharp),
+              subtitle: Text("List View Builder Topic"),
+              trailing: Icon(Icons.arrow_forward_ios),
             ),
           );
         }
