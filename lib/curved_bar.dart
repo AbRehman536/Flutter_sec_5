@@ -17,6 +17,10 @@ class _CurvedBarDemoState extends State<CurvedBarDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.yellow,
+        title: Text("Bottom Bar"),
+      ),
       body: screenList.elementAt(selectedIndex),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.blueAccent.shade100,
