@@ -22,7 +22,7 @@ class GoogleMapDemo extends StatelessWidget {
     ),
     Marker(
       markerId: MarkerId('3'),
-      position: LatLng(35.6996, 73.0361),
+      position: LatLng(35.6996, 73.0362),
       infoWindow: InfoWindow(title: 'Marker 3'),
     ),
     Marker(
