@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sec_1/passing_parameters/screen_b.dart';
+import 'package:flutter_sec_5/passing_parameters/screen_b.dart';
 
 class ScreenA extends StatelessWidget {
   const ScreenA({super.key});

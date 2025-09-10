@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sec_1/passing_parameters/screen_b.dart';
-import 'package:flutter_sec_1/provider/screen_b_provider.dart';
-import 'package:flutter_sec_1/provider/user.dart';
+import 'package:flutter_sec_5/provider/screen_b_provider.dart';
+import 'package:flutter_sec_5/provider/user.dart';
 import 'package:provider/provider.dart';
 
 class ScreenAProvider extends StatelessWidget {

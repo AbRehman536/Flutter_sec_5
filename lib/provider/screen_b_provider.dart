@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sec_1/provider/user.dart';
+import 'package:flutter_sec_5/provider/user.dart';
 import 'package:provider/provider.dart';
 
 class ScreenBProvider extends StatelessWidget {
