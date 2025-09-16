@@ -3,6 +3,8 @@ import 'package:flutter_sec_5/listtiledemo.dart';
 import 'package:flutter_sec_5/login_page.dart';
 import 'package:flutter_sec_5/single_selection.dart';
 
+import 'gridview.dart';
+
 class BottomSheetDemo extends StatelessWidget {
   const BottomSheetDemo({super.key});
 
@@ -31,8 +33,8 @@ class BottomSheetDemo extends StatelessWidget {
                       color: Colors.blue,
                       child: ListTile(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ListTileDemo()));
-                        },
+                              Navigator.pop(context);
+                              },
                         leading: Icon(Icons.settings),
                         title: Text("Settings"),
                         trailing: Icon(Icons.arrow_forward_ios),
@@ -42,7 +44,7 @@ class BottomSheetDemo extends StatelessWidget {
                       color: Colors.green,
                       child: ListTile(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                          Navigator.pop(context);
                         },
                         leading: Icon(Icons.person),
                         title: Text("Profile"),
@@ -53,7 +55,7 @@ class BottomSheetDemo extends StatelessWidget {
                       color: Colors.red,
                       child: ListTile(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SingleSelectionDemo()));
+                          Navigator.pop(context);
                         },
                         leading: Icon(Icons.chat),
                         title: Text("Chats"),
@@ -64,7 +66,7 @@ class BottomSheetDemo extends StatelessWidget {
                       color: Colors.yellow,
                       child: ListTile(
                         onTap: (){
-                          Navigator.pop(context);
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
                         },
 
                         leading: Icon(Icons.logout),
@@ -72,10 +74,23 @@ class BottomSheetDemo extends StatelessWidget {
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
                     ),
+                        Image.asset("assets/images/download.jpg"),
                       ],
                     );
                   });
             }, child: Text("Show Bottom Sheet")),
+            Builder(
+              builder: (context) {
+                return ElevatedButton(
+                  onPressed: () {
+                    Scaffold.of(context).showBottomSheet(
+                          (context) => GridViewDemo(),
+                    );
+                  },
+                  child: Text("Show Screen"),
+                );
+              },
+            )
           ],
         ),
       ),

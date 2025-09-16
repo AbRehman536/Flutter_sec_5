@@ -49,21 +49,27 @@ class _DialogBoxDemoState extends State<DialogBoxDemo> {
         ElevatedButton(onPressed: (){
           showDialog(
             barrierDismissible: false,
-              context: context,
-              builder: (BuildContext context){
-                return AlertDialog(
-                  title: Text("Message"),
-                  content: Text("Login Successfully"),
-                  actions: [
-                    TextButton(onPressed: (){
-                      Navigator.pop(context);
-                    }, child: Text("No")),
-                    TextButton(onPressed: (){
-                      Navigator.pop(context);
-                    }, child: Text("Yes")),
-                  ],
-                );
-              });
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text("Thank You!"),
+                content: Text("Login Successfully"),
+                actions: [
+                  TextButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, child: Text("No")),
+                  TextButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, child: Text("Yes")),
+                ],
+              );
+            },
+
+
+
+
+
+              );
           if(emailController.text.isEmpty){
             ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text("Email cannot be empty")));
