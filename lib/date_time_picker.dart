@@ -21,7 +21,7 @@ class _DateTimePickerDemoState extends State<DateTimePickerDemo> {
       body: Center(
         child: Column(children: [
           Text(
-            DateFormat.yMMMEd().format(selectedDate),
+            DateFormat.yMMMMEEEEd().format(selectedDate),
             style: TextStyle(fontSize: 30),
           ),
           ElevatedButton(onPressed: (){
